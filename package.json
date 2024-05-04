@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "mongodb": "^6.6.0"
+  }
+}
