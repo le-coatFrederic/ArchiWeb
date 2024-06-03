@@ -12,16 +12,22 @@ import { ITEM } from "./mock-item-list";
 })
 export class AppComponent implements OnInit {
   itemList: Item[] = ITEM;
+  itemSelected: Item | undefined;
   title: string = "tuto-angular";
 
   ngOnInit() {
     console.table(this.itemList);
-    for (let item of this.itemList) {
-      this.selectItem(item);
-    }
   }
 
-  selectItem(item: Item) {
-    console.log(`Vous avez cliqué sur ${item.id} : ${item.name}`);
+  selectItem(itemId: string) {
+    const item: Item | undefined = this.itemList.find(
+      (item) => item.id == +itemId
+    );
+
+    if (item) {
+      console.log(`Vous avez sélectionné ${item?.name}`);
+    }
+
+    this.itemSelected = item;
   }
 }

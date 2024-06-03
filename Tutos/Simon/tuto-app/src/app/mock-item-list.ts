@@ -37,4 +37,40 @@ export const ITEM: Item[] = [
     material: ["Wood", "Glass"],
     created: new Date(),
   },
+  {
+    id: 6,
+    name: "Mini table",
+    material: ["Wood", "Glass"],
+    created: new Date(),
+  },
+  {
+    id: 7,
+    name: "Mini table",
+    material: ["Wood", "Glass"],
+    created: new Date(),
+  },
+  {
+    id: 8,
+    name: "Mini table",
+    material: ["Wood", "Glass"],
+    created: new Date(),
+  },
+  {
+    id: 9,
+    name: "Mini table",
+    material: ["Wood", "Glass"],
+    created: new Date(),
+  },
+  {
+    id: 10,
+    name: "Mini table",
+    material: ["Wood", "Glass"],
+    created: new Date(),
+  },
+  {
+    id: 11,
+    name: "Mini table",
+    material: ["Wood", "Glass"],
+    created: new Date(),
+  },
 ];
