@@ -1,0 +1,5 @@
+<div class="grid">
+  @for (it of itemsCrud.getAllItems(); track $index) {
+  <app-card [item]="itemCopy" />
+  }
+</div>

@@ -1,0 +1,22 @@
+<div class="card" id="card-{{ item.id }}">
+  <div class="card-head flex-horizontal">
+    <div class="card-head-left">
+      {{ item.name }}
+    </div>
+    <div class="card-head-right">
+      {{ item.id }}
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-body-material">
+      <ul>
+        @for (material of item.material; track $index) {
+        <li>
+          {{ material }}
+        </li>
+        }
+      </ul>
+    </div>
+    <div>Created : {{ item.created }}</div>
+  </div>
+</div>

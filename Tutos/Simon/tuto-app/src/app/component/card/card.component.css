@@ -1,0 +1,38 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 14em;
+  height: 18em;
+  margin: 1em;
+  padding: 1em;
+  background-color: rgb(240, 224, 224);
+  box-shadow: 0 0.5em 2em rgb(175, 171, 171);
+  border-radius: 0.5em;
+}
+
+.card-head {
+  display: flex;
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+
+  .card-head-left,
+  .card-head-right {
+    display: flex;
+    align-items: center;
+  }
+
+  .card-head-left {
+    flex-grow: 1;
+  }
+}
+
+.card-body {
+  flex-direction: column;
+  flex-grow: 1;
+  display: flex;
+}
+
+.card-body-material {
+  flex-grow: 1;
+}

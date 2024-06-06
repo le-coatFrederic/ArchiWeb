@@ -1,4 +1,4 @@
-import { Item } from "./item";
+import { Item } from "./shared/domain/entity/item";
 
 export const ITEM: Item[] = [
   {

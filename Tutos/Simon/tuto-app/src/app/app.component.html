@@ -1,21 +1,2 @@
-<div class="center flex-column">
-  <div class="center">
-    <h1 class="center">{{ title }}</h1>
-  </div>
-
-  <div class="center flex-horizontal">
-    @for (item of itemList; track $index) {
-    <div class="card">
-      <h3>{{ item.id }} - {{ item.name }}</h3>
-      <p>{{ item.material }}</p>
-      <p>
-        {{ item.created.getDate() }}/{{ item.created.getUTCMonth() }}/{{
-          item.created.getFullYear()
-        }}
-      </p>
-    </div>
-    }
-  </div>
-</div>
-
-<router-outlet></router-outlet>
+<router-outlet />
+<app-card-grid />
