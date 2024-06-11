@@ -1,0 +1,10 @@
+[{
+  "_id": {
+    "$oid": "6643246d94e89392a3b7fbd5"
+  },
+  "id_materiel": "0",
+  "modele": "Ecran_12",
+  "image": "/assets/images/img.png",
+  "stocke": "true",
+  "utilise": "false"
+}]
