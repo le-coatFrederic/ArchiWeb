@@ -1,3 +1,8 @@
+import { DTOMateriel } from './DTOMateriel';
+import { MaterielCrud } from './MaterielCrud';
+
 export interface IMaterielController {
-  // TODO: Ajouter toutes les interactions de l'interface pour le matériel
+  ajouterNouveauMateriel(crud: MaterielCrud, materiel: DTOMateriel): void;
+  modifierMateriel(crud: MaterielCrud, materiel: DTOMateriel): void;
+  supprimerMateriel(crud: MaterielCrud, materielId: string): void;
 }

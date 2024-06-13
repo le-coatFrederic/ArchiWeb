@@ -1,4 +1,5 @@
 import { Materiel } from '../../entity/materiel';
+import { DTOMateriel } from './DTOMateriel';
 import { IMaterielController } from './IController';
 import { IMaterielDbInput } from './IDbInput';
 import { IMaterielDbOutput } from './IDbOutput';
@@ -61,7 +62,7 @@ export class MaterielCrud {
 
   modifierMateriel(
     idMateriel: string,
-    nouveauMateriel: Materiel
+    nouveauMateriel: DTOMateriel
   ): MaterielCrud {
     if (idMateriel == undefined || nouveauMateriel == undefined) {
       throw new Error("Argument can't be undefined");
@@ -75,7 +76,7 @@ export class MaterielCrud {
     }
 
     materielAModifier.modifierMateriel(nouveauMateriel);
-    this.dbOutput.modifierMateriel(nouveauMateriel);
+    this.dbOutput.modifierMateriel(materielAModifier);
 
     return this;
   }
