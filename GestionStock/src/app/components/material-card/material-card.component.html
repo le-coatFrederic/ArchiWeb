@@ -1,0 +1,17 @@
+<div class="card">
+  <div class="head">
+    <p>{{ materiel.modele.intitule }}</p>
+    <p class="right">{{ materiel.idMateriel }}</p>
+  </div>
+  <div class="body">
+    @if (materiel.modele.imageUrl) {
+    <img [src]="materiel.modele.imageUrl" [alt]="materiel.modele.intitule" />
+    }
+    <div class="content">
+      <p>id modèle : {{ materiel.modele.idModele }}</p>
+      <p>type de materiel : {{ materiel.modele.type }}</p>
+      <p>id salle : {{ materiel.salle.idSalle }}</p>
+      <p>id utilisateur : {{ materiel.utilisateur.idUtilisateur }}</p>
+    </div>
+  </div>
+</div>

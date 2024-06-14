@@ -1,75 +1,75 @@
 header {
-    position: relative;
-    padding: 0;
-    border-bottom: 1px solid #217B8A; 
+  position: relative;
+  padding: 0;
+  border-bottom: 1px solid #217b8a;
 }
 
-a { 
-    color: black;
+a {
+  color: black;
 }
 
-a:hover{
-    background: #217B8A;
-    color: white;
-    cursor: pointer;
+a:hover {
+  background: #217b8a;
+  color: white;
+  cursor: pointer;
 }
 
 .container {
-    margin : 0 auto;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .nav-gauche {
-    display: flex;
-    align-items: center; /* Aligne les éléments verticalement au centre */
+  display: flex;
+  align-items: center; /* Aligne les éléments verticalement au centre */
 }
 
 .nav-droite {
-    display: flex;
-    align-items: center; /* Aligne les éléments verticalement au centre */
-    margin-left: auto; /* Pousse cette section à droite */
+  display: flex;
+  align-items: center; /* Aligne les éléments verticalement au centre */
+  margin-left: auto; /* Pousse cette section à droite */
 }
 
-ul { 
-    display: flex;
-    list-style-type: none;
-    margin: 0;
+ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
 }
 
 ul a {
-    padding: 1rem;
-    display: inline-block;
+  padding: 1rem;
+  display: inline-block;
 }
 
 img {
-    height: auto;
-    max-width: 100px;
-    max-height: 50px;
+  height: auto;
+  max-width: 100px;
+  max-height: 50px;
 }
 
 a .logo {
-    padding: 1rem;
-    display: flex;
-    align-items: center;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
 }
 
 .menu-container {
-    position: relative;
+  position: relative;
 }
-.menu-container:hover .menu{
-    display: block;
+.menu-container:hover .menu {
+  display: block;
 }
 
 .menu {
-    position: absolute;
-    z-index: 1;
-    display: none;
-    background: whitesmoke;
+  position: absolute;
+  z-index: 1;
+  display: none;
+  background: whitesmoke;
 }
 
 .menu a {
-    width: 100%;
-    min-width: 8rem;
+  width: 100%;
+  min-width: 8rem;
 }
