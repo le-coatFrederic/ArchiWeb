@@ -1,17 +1,28 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Materiel } from '../../../domain/entity/materiel';
+import { Modele } from '../../../domain/entity/modele';
+import { SlicePipe } from '@angular/common';
 
 @Component({
   selector: 'app-material-card',
   standalone: true,
-  imports: [],
+  imports: [SlicePipe],
   templateUrl: './material-card.component.html',
   styleUrl: './material-card.component.css',
 })
 export class MaterialCardComponent implements OnInit {
-  @Input() materiel!: Materiel;
+  @Input() modele!: Modele;
+  quantity!: number;
 
   ngOnInit(): void {
-    console.log('Création de la carte ' + this.materiel);
+    this.quantity = 0;
+    this.modele.materiels.forEach((element) => {
+      if (element.salle.idSalle == 'SA0000') {
+        this.quantity++;
+      }
+    });
+  }
+
+  constructor() {
+    console.log(this);
   }
 }

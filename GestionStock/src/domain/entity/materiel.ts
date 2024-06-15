@@ -1,7 +1,6 @@
 import { DTOMateriel } from '../dto/DtoMateriel';
 import { Modele } from './modele';
 import { Salle } from './salle';
-import { TypeMateriel } from './typeMateriel';
 import { Utilisateur } from './utilisateur';
 
 export class Materiel {

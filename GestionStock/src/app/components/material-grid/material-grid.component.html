@@ -1,5 +1,5 @@
 <div class="grille">
-  @for (materiel of materialList; track $index) {
-  <app-material-card [materiel]="materiel"></app-material-card>
+  @for (modele of modeles; track modele.idModele) {
+  <app-material-card [modele]="modele"></app-material-card>
   }
 </div>

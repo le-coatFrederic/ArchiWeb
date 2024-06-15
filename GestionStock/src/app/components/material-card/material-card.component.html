@@ -1,17 +1,22 @@
 <div class="card">
   <div class="head">
-    <p>{{ materiel.modele.intitule }}</p>
-    <p class="right">{{ materiel.idMateriel }}</p>
+    <div>
+      {{
+        modele.intitule.length > 17
+          ? (modele.intitule | slice : 0 : 17) + "..."
+          : modele.intitule
+      }}
+    </div>
+    <div class="right">{{ modele.idModele }}</div>
   </div>
+
   <div class="body">
-    @if (materiel.modele.imageUrl) {
-    <img [src]="materiel.modele.imageUrl" [alt]="materiel.modele.intitule" />
+    @if (modele.imageUrl) {
+    <img [src]="modele.imageUrl" [alt]="modele.intitule" />
     }
     <div class="content">
-      <p>id modèle : {{ materiel.modele.idModele }}</p>
-      <p>type de materiel : {{ materiel.modele.type.typeMateriel }}</p>
-      <p>id salle : {{ materiel.salle.idSalle }}</p>
-      <p>id utilisateur : {{ materiel.utilisateur.idUtilisateur }}</p>
+      type de materiel : {{ modele.type.typeMateriel }} quantité disponible :
+      {{ quantity }}
     </div>
   </div>
 </div>

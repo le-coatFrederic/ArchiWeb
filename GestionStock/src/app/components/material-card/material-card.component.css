@@ -4,30 +4,34 @@
   flex-direction: column;
   padding: 1rem;
   width: 15rem;
-  height: 27rem;
+  height: auto;
   box-shadow: gainsboro 0 0.5rem 1.5rem;
-  justify-content: center;
   align-content: center;
   border-radius: 0.7rem;
-}
 
-.head {
-  display: flex;
-}
+  .head {
+    display: flex;
+    margin-bottom: 1rem;
 
-p.right {
-  flex-grow: 1;
-  text-align: end;
-}
+    .right {
+      flex-grow: 1;
+      text-align: right;
+    }
+  }
 
-.body {
-  display: flex;
-  flex-direction: column;
-}
+  .body {
+    display: flex;
+    flex-direction: column;
 
-img {
-  width: 13rem;
-  height: auto;
-  border: 0.1rem black solid;
-  border-radius: 0.5rem;
+    img {
+      width: 13rem;
+      height: auto;
+      border: 0.1rem black solid;
+      border-radius: 0.5rem;
+    }
+
+    .content {
+      margin-top: 1rem;
+    }
+  }
 }
