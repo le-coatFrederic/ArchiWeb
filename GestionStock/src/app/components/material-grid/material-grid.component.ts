@@ -55,7 +55,12 @@ let ALLSALLE: Salle[] = [
   ),
 ];
 
-let ALLTYPEMATERIAL: TypeMateriel[] = [new TypeMateriel('Bureau')];
+let ALLTYPEMATERIAL: TypeMateriel[] = [
+  new TypeMateriel('Bureau'),
+  new TypeMateriel('Table'),
+  new TypeMateriel('Chaise'),
+  new TypeMateriel('Ordinateur'),
+];
 
 let ALLMODELE: Modele[] = [
   new Modele(

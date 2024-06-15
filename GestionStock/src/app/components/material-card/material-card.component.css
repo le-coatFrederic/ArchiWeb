@@ -4,7 +4,7 @@
   flex-direction: column;
   padding: 1rem;
   width: 15rem;
-  height: 25rem;
+  height: 27rem;
   box-shadow: gainsboro 0 0.5rem 1.5rem;
   justify-content: center;
   align-content: center;
@@ -28,4 +28,6 @@ p.right {
 img {
   width: 13rem;
   height: auto;
+  border: 0.1rem black solid;
+  border-radius: 0.5rem;
 }
