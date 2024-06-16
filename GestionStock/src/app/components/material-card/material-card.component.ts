@@ -14,7 +14,7 @@ import { Router } from '@angular/router';
 export class MaterialCardComponent implements OnInit {
   @Input() modele!: Modele;
   quantity!: number;
-  selected!: boolean;
+  quantityWanted: number = 0;
 
   constructor(
     private cardClick: OnClickModeleCardService,
@@ -22,7 +22,6 @@ export class MaterialCardComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.selected = false;
     this.quantity = 0;
     this.modele.materiels.forEach((element) => {
       if (element.salle.idSalle == 'SA0000') {
@@ -30,16 +29,13 @@ export class MaterialCardComponent implements OnInit {
       }
     });
   }
-  onSelectClick() {
-    if (this.selected) {
-      this.selected = false;
-      this.cardClick.addModele(this.modele, 'remove');
-      console.log(this.cardClick.print());
-    } else {
-      this.selected = true;
-      this.cardClick.addModele(this.modele, 'add');
-      console.log(this.cardClick.print());
-    }
+
+  onRemoveClick() {
+    this.quantityWanted--;
+  }
+
+  onAddClick() {
+    this.quantityWanted++;
   }
 
   onDetailClick() {

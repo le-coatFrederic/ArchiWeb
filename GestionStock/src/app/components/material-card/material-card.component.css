@@ -36,11 +36,39 @@
       flex-direction: column;
       gap: 0.6rem;
 
+      div.quantity {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      input.quantity {
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 2rem;
+        background-color: #217b8a;
+        border-radius: 0.3rem;
+        padding: 0.2rem;
+        color: white;
+        font-weight: bold;
+        margin: 0 0 0 0.5rem;
+        flex-grow: 1;
+      }
+
       button {
         text-decoration: none;
         color: black;
         padding: 0.5rem;
         border-radius: 0.5rem;
+        flex-grow: 1;
       }
 
       button:hover {
@@ -49,8 +77,4 @@
       }
     }
   }
-}
-
-.card.active {
-  background-color: #217b8a;
 }

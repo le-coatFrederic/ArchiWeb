@@ -1,4 +1,4 @@
-<div class="card" [ngClass]="{ active: selected }">
+<div class="card">
   <div class="head">
     <div>
       {{
@@ -17,9 +17,10 @@
     <div class="content">
       <span>type de materiel : {{ modele.type.typeMateriel }}</span>
       <span>quantité disponible : {{ quantity }}</span>
-      <button (click)="onSelectClick()">
-        {{ selected ? "Retirer" : "Ajouter" }}
-      </button>
+      <div class="quantity">
+        <p>quantité commandée :</p>
+        <input class="quantity" [value]="quantityWanted" />
+      </div>
       <button (click)="onDetailClick()">Détails</button>
     </div>
   </div>
