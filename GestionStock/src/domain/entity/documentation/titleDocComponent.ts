@@ -6,4 +6,8 @@ export class TitleDocComponent implements IDocComponent {
   print(): string {
     return '<h2>' + this.title + '</h2>';
   }
+
+  getType(): string {
+    return 'title';
+  }
 }

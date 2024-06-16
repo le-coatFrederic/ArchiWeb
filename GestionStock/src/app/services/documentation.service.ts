@@ -3,13 +3,17 @@ import { DocTree } from '../../domain/entity/documentation/docTree';
 import { TitleDocComponent } from '../../domain/entity/documentation/titleDocComponent';
 import { ImageDocComponent } from '../../domain/entity/documentation/imageDocComponent';
 import { TextDocComponent } from '../../domain/entity/documentation/textDocComponent';
+import { IDocComponent } from '../../domain/entity/documentation/IDocComponent';
 
 @Injectable({
   providedIn: 'root',
 })
 export class DocumentationService {
   private documentation: DocTree;
+  private titles: IDocComponent[];
+
   constructor() {
+    this.titles = [];
     this.documentation = new DocTree(
       new TitleDocComponent('1. Créer un compte 📝')
     ).addSon(
@@ -35,9 +39,14 @@ export class DocumentationService {
           )
         )
     );
+    this.titles.push(...this.documentation.parcoursLookingTitle());
   }
 
   getDocumentation(): DocTree[] {
     return [this.documentation];
+  }
+
+  getTitles(): IDocComponent[] {
+    return this.titles;
   }
 }

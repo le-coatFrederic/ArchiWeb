@@ -7,9 +7,14 @@ export class ImageDocComponent implements IDocComponent {
     private alt: string,
     private sourceType: SourceType
   ) {}
+
   print(): string {
     return (
       '<img ' + this.sourceType + '="' + this.url + '" alt="' + this.alt + '"/>'
     );
+  }
+
+  getType(): string {
+    return 'image';
   }
 }

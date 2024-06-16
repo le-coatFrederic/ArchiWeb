@@ -6,4 +6,8 @@ export class TextDocComponent implements IDocComponent {
   print(): string {
     return '<p>' + this.text + '</p>';
   }
+
+  getType(): string {
+    return 'text';
+  }
 }

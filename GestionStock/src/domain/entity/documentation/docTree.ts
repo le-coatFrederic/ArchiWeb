@@ -1,4 +1,5 @@
 import { IDocComponent } from './IDocComponent';
+import { TitleDocComponent } from './titleDocComponent';
 
 export class DocTree {
   private value: IDocComponent;
@@ -59,10 +60,19 @@ export class DocTree {
   }
 
   parcours(): string {
-    console.log(this);
     let textToReturn: string;
     textToReturn = this.value.print();
     this.sons.forEach((son) => (textToReturn += son.parcours()));
     return textToReturn;
+  }
+
+  parcoursLookingTitle(): IDocComponent[] {
+    let titles: IDocComponent[] = [];
+    if (this.value.getType() === 'title') {
+      titles.push(this.value);
+    }
+
+    this.sons.forEach((son) => titles.push(...son.parcoursLookingTitle()));
+    return titles;
   }
 }

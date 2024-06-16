@@ -22,4 +22,12 @@ export class OnClickModeleCardService {
       this.modeleChosed.splice(this.modeleChosed.indexOf(modele));
     }
   }
+
+  getModeles(): Modele[] {
+    return this.modeleChosed;
+  }
+
+  print() {
+    console.log(this.modeleChosed);
+  }
 }

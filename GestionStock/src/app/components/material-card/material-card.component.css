@@ -51,10 +51,6 @@
   }
 }
 
-.card:hover {
-  background-color: gainsboro;
-}
-
 .card.active {
   background-color: #217b8a;
 }

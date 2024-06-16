@@ -34,11 +34,11 @@ export class MaterialCardComponent implements OnInit {
     if (this.selected) {
       this.selected = false;
       this.cardClick.addModele(this.modele, 'remove');
-      console.log(this);
+      console.log(this.cardClick.print());
     } else {
       this.selected = true;
       this.cardClick.addModele(this.modele, 'add');
-      console.log(this);
+      console.log(this.cardClick.print());
     }
   }
 
