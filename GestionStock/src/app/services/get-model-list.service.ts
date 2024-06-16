@@ -49,6 +49,16 @@ export class GetModelListService {
   getModeleList(): Modele[] {
     return [...this.modeleList];
   }
+
+  getModeleById(id: string): Modele {
+    const modele: Modele | undefined = this.modeleList.find(
+      (m) => m.idModele === id
+    );
+    if (!modele) {
+      throw new Error('modele not found');
+    }
+    return modele;
+  }
 }
 
 let ALLSALLE: Salle[] = [
@@ -103,6 +113,126 @@ let ALLMODELE: Modele[] = [
     ALLTYPEMATERIAL[0],
     "Bureau d'acier",
     'https://www.inside75.com/contents/refim/-b/bureau-ferro-acier-industriel-roulettes.jpg'
+  ),
+  new Modele(
+    'MO0002',
+    ALLTYPEMATERIAL[2],
+    'Chaise de bureau simple',
+    'https://www.chaisepro.fr/images/product/1/large/pl_1_1_6743.jpg'
+  ),
+  new Modele(
+    'MO0002',
+    ALLTYPEMATERIAL[2],
+    'Chaise de bureau simple',
+    'https://www.chaisepro.fr/images/product/1/large/pl_1_1_6743.jpg'
+  ),
+  new Modele(
+    'MO0002',
+    ALLTYPEMATERIAL[2],
+    'Chaise de bureau simple',
+    'https://www.chaisepro.fr/images/product/1/large/pl_1_1_6743.jpg'
+  ),
+  new Modele(
+    'MO0002',
+    ALLTYPEMATERIAL[2],
+    'Chaise de bureau simple',
+    'https://www.chaisepro.fr/images/product/1/large/pl_1_1_6743.jpg'
+  ),
+  new Modele(
+    'MO0002',
+    ALLTYPEMATERIAL[2],
+    'Chaise de bureau simple',
+    'https://www.chaisepro.fr/images/product/1/large/pl_1_1_6743.jpg'
+  ),
+  new Modele(
+    'MO0002',
+    ALLTYPEMATERIAL[2],
+    'Chaise de bureau simple',
+    'https://www.chaisepro.fr/images/product/1/large/pl_1_1_6743.jpg'
+  ),
+  new Modele(
+    'MO0002',
+    ALLTYPEMATERIAL[2],
+    'Chaise de bureau simple',
+    'https://www.chaisepro.fr/images/product/1/large/pl_1_1_6743.jpg'
+  ),
+  new Modele(
+    'MO0002',
+    ALLTYPEMATERIAL[2],
+    'Chaise de bureau simple',
+    'https://www.chaisepro.fr/images/product/1/large/pl_1_1_6743.jpg'
+  ),
+  new Modele(
+    'MO0002',
+    ALLTYPEMATERIAL[2],
+    'Chaise de bureau simple',
+    'https://www.chaisepro.fr/images/product/1/large/pl_1_1_6743.jpg'
+  ),
+  new Modele(
+    'MO0002',
+    ALLTYPEMATERIAL[2],
+    'Chaise de bureau simple',
+    'https://www.chaisepro.fr/images/product/1/large/pl_1_1_6743.jpg'
+  ),
+  new Modele(
+    'MO0002',
+    ALLTYPEMATERIAL[2],
+    'Chaise de bureau simple',
+    'https://www.chaisepro.fr/images/product/1/large/pl_1_1_6743.jpg'
+  ),
+  new Modele(
+    'MO0002',
+    ALLTYPEMATERIAL[2],
+    'Chaise de bureau simple',
+    'https://www.chaisepro.fr/images/product/1/large/pl_1_1_6743.jpg'
+  ),
+  new Modele(
+    'MO0002',
+    ALLTYPEMATERIAL[2],
+    'Chaise de bureau simple',
+    'https://www.chaisepro.fr/images/product/1/large/pl_1_1_6743.jpg'
+  ),
+  new Modele(
+    'MO0002',
+    ALLTYPEMATERIAL[2],
+    'Chaise de bureau simple',
+    'https://www.chaisepro.fr/images/product/1/large/pl_1_1_6743.jpg'
+  ),
+  new Modele(
+    'MO0002',
+    ALLTYPEMATERIAL[2],
+    'Chaise de bureau simple',
+    'https://www.chaisepro.fr/images/product/1/large/pl_1_1_6743.jpg'
+  ),
+  new Modele(
+    'MO0002',
+    ALLTYPEMATERIAL[2],
+    'Chaise de bureau simple',
+    'https://www.chaisepro.fr/images/product/1/large/pl_1_1_6743.jpg'
+  ),
+  new Modele(
+    'MO0002',
+    ALLTYPEMATERIAL[2],
+    'Chaise de bureau simple',
+    'https://www.chaisepro.fr/images/product/1/large/pl_1_1_6743.jpg'
+  ),
+  new Modele(
+    'MO0002',
+    ALLTYPEMATERIAL[2],
+    'Chaise de bureau simple',
+    'https://www.chaisepro.fr/images/product/1/large/pl_1_1_6743.jpg'
+  ),
+  new Modele(
+    'MO0002',
+    ALLTYPEMATERIAL[2],
+    'Chaise de bureau simple',
+    'https://www.chaisepro.fr/images/product/1/large/pl_1_1_6743.jpg'
+  ),
+  new Modele(
+    'MO0002',
+    ALLTYPEMATERIAL[2],
+    'Chaise de bureau simple',
+    'https://www.chaisepro.fr/images/product/1/large/pl_1_1_6743.jpg'
   ),
   new Modele(
     'MO0002',

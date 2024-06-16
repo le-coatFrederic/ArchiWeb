@@ -5,7 +5,7 @@
   padding: 1rem;
   width: 15rem;
   height: auto;
-  box-shadow: gainsboro 0 0.5rem 1.5rem;
+  box-shadow: gainsboro 0 0.2rem 0.5rem;
   align-content: center;
   border-radius: 0.7rem;
 
@@ -26,12 +26,35 @@
     img {
       width: 13rem;
       height: auto;
-      border: 0.1rem black solid;
+      border: 0.2rem black solid;
       border-radius: 0.5rem;
     }
 
     .content {
       margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+
+      button {
+        text-decoration: none;
+        color: black;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+      }
+
+      button:hover {
+        background-color: #217b8a;
+        color: white;
+      }
     }
   }
+}
+
+.card:hover {
+  background-color: gainsboro;
+}
+
+.card.active {
+  background-color: #217b8a;
 }

@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card" [ngClass]="{ active: selected }">
   <div class="head">
     <div>
       {{
@@ -15,8 +15,12 @@
     <img [src]="modele.imageUrl" [alt]="modele.intitule" />
     }
     <div class="content">
-      type de materiel : {{ modele.type.typeMateriel }} quantité disponible :
-      {{ quantity }}
+      <span>type de materiel : {{ modele.type.typeMateriel }}</span>
+      <span>quantité disponible : {{ quantity }}</span>
+      <button (click)="onSelectClick()">
+        {{ selected ? "Retirer" : "Ajouter" }}
+      </button>
+      <button (click)="onDetailClick()">Détails</button>
     </div>
   </div>
 </div>

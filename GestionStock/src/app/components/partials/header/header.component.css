@@ -5,7 +5,7 @@ header {
   left: 0;
   width: 100%;
   padding: 0;
-  border-bottom: 1px solid #217b8a;
+  border-bottom: 0.2rem solid #217b8a;
   background-color: white;
 }
 
@@ -17,6 +17,10 @@ a:hover {
   background: #217b8a;
   color: white;
   cursor: pointer;
+}
+
+.active {
+  text-decoration: underline;
 }
 
 .container {

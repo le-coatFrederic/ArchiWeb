@@ -1,17 +1,35 @@
 <!-- Header de l'utilisateur -->
 <header>
   <div class="container">
-    <a href="/" class="logo">
+    <a routerLink="" class="logo">
       <img src="../assets/images/logoUPJV_Bleu.png" />
     </a>
     <nav class="nav-gauche">
       <ul>
         <li>
-          <a href="/">Accueil</a>
+          <a
+            routerLink=""
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Accueil</a
+          >
         </li>
         <li>
-          <a href="/">Mon Matériel</a>
+          <a
+            routerLink="/my"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Mon Matériel</a
+          >
           <!-- Liste du matériel -->
+        </li>
+        <li>
+          <a
+            routerLink="/modeles"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Matériel disponible</a
+          >
         </li>
       </ul>
     </nav>

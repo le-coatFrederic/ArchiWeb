@@ -1,0 +1,10 @@
+<h2>Vous êtes sur la page d'accueil, elle sert aussi de documentation !</h2>
+<p>Veillez à bien la lire pour ne pas faire de bêtises 😣</p>
+
+<div class="doc-body">
+  <div class="doc-content">
+    @for (docbloc of doc; track $index) {
+    <div [innerHTML]="docbloc.parcours()" class="doc-bloc"></div>
+    }
+  </div>
+</div>
