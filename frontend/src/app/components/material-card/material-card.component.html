@@ -1,0 +1,20 @@
+<div class="card">
+  <div class="head">
+    <div>
+      {{
+        modele.intitule.length > 17
+          ? (modele.intitule | slice : 0 : 32) + "..."
+          : modele.intitule
+      }}
+    </div>
+  </div>
+
+  <div class="body">
+    @if (modele.imageUrl) {
+    <img [src]="modele.imageUrl" [alt]="modele.intitule" />
+    }
+    <div class="content">
+      <button (click)="onDetailClick()">Détails</button>
+    </div>
+  </div>
+</div>
