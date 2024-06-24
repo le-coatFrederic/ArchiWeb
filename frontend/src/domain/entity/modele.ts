@@ -1,18 +1,11 @@
-import { Materiel } from './materiel';
-import { TypeMateriel } from './typeMateriel';
-
-export class Modele {
+export class Materiel {
   constructor(
     public _id: string,
-    public type: TypeMateriel,
+    public type: string,
+    public modele: string,
     public intitule: string,
     public imageUrl: string,
-    public materiels: Materiel[]
+    public emplacement: string,
+    public idUtilisateur?: string
   ) {}
-
-  ajouterMateriel(materiel: Materiel): Modele {
-    materiel.modele = this;
-    this.materiels.push(materiel);
-    return this;
-  }
 }
