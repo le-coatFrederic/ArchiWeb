@@ -1,0 +1,30 @@
+<div class="main">
+  <h2>Connectez-vous</h2>
+  <p>en remplissant le formulaire</p>
+  <form #userForm="ngForm" (ngSubmit)="submitForm(userForm)">
+    <div>
+      <label for="email">Email</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        [(ngModel)]="user.email"
+        required
+      />
+    </div>
+    <div>
+      <label for="password">Mot de passe</label>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        [(ngModel)]="user.password"
+        required
+      />
+    </div>
+    <div>
+      <button type="submit" [disabled]="userForm.invalid">Valider</button>
+      <a routerLink="/api/utilisateurs/register">Je n'ai pas de compte</a>
+    </div>
+  </form>
+</div>

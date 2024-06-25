@@ -1,0 +1,23 @@
+<h2>Formulaire d'ajout de salle</h2>
+
+<form (submit)="ajouterSalle()">
+    <label for="numero">Numéro :</label>
+    <input type="text" id="numero" [(ngModel)]="salle.numero" name="numero"><br><br>
+
+    <label for="etage">Étage :</label>
+    <input type="text" id="etage" [(ngModel)]="salle.etage" name="etage"><br><br>
+
+    <label for="adresse">Adresse :</label>
+    <input type="text" id="adresse" [(ngModel)]="salle.adresse" name="adresse"><br><br>
+
+    <label for="adresseComplement">Complément d'adresse :</label>
+    <input type="text" id="adresseComplement" [(ngModel)]="salle.adresseComplement" name="adresseComplement"><br><br>
+
+    <label for="codePostal">Code Postal :</label>
+    <input type="text" id="codePostal" [(ngModel)]="salle.codePostal" name="codePostal"><br><br>
+
+    <label for="ville">Ville :</label>
+    <input type="text" id="ville" [(ngModel)]="salle.ville" name="ville"><br><br>
+
+    <input type="submit" value="Ajouter">
+</form>

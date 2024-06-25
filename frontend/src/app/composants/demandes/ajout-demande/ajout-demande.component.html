@@ -1,0 +1,21 @@
+<h1> Demande d'emprunt de matériel</h1>
+<form (submit)="ajouterDemande()">
+    <label> Demandeur : </label>
+    <select id="utilisateur" [(ngModel)]="demande.utilisateur" name="type">
+        <option *ngFor="let user of users" [value]="user.login">{{ user.nom }} : {{ user.login }}</option>
+    </select><br>
+
+    <br/>
+
+    <label> Matériel voulu : </label>
+    <select id="materiel" [(ngModel)]="demande.materiel" name="type">
+        <option *ngFor="let materiel of materiels" [value]="materiel.modele">{{ materiel.modele }}</option>
+    </select><br><br>
+
+    <label> Vous souhaiteriez avoir ce materiel dans quelle salle ?  : </label>
+    <select id="lieu" [(ngModel)]="demande.lieu" name="lieu">
+        <option *ngFor="let salle of salles" [value]="salle.numero">Salle {{ salle.numero }} - {{ salle.ville }}</option>
+    </select><br><br>
+
+    <input type="submit" value="Envoyer"/>
+</form>

@@ -25,65 +25,48 @@
         </li>
         <li>
           <a
-            routerLink="/api/modeles"
+            routerLink="/api/materiels"
             routerLinkActive="active"
             [routerLinkActiveOptions]="{ exact: true }"
             >Matériel disponible</a
           >
         </li>
+        @if(roleAdmin){
+        <li>
+          <a
+            routerLink="/api/materiels/manage"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Gérer le matériel</a
+          >
+        </li>
+        }
       </ul>
     </nav>
     <nav class="nav-droite">
       <ul>
-        <li>
-          <a href="/connexion">Se connecter</a>
-        </li>
+        @if(isauth){
         <li class="menu-container">
-          <a href="/">Mon Compte</a>
+          <a href="/">{{ user.nom }}</a>
           <div class="menu">
             <a href="/profil">Mon profil</a>
             <a href="">Se déconnecter</a>
           </div>
         </li>
+        <li>
+          <a (click)="logout()">Se déconnecter</a>
+        </li>
+        } @else {
+        <li>
+          <a
+            routerLink="/api/utilisateurs/login"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Se connecter</a
+          >
+        </li>
+        }
       </ul>
     </nav>
   </div>
 </header>
-
-<!-- Header de l'administrateur -->
-<!--
-<header>
-    <div class="container">
-        <a href="/" class="logo">
-            <img src="../assets/images/logoUPJV_Bleu.png"/>
-        </a>
-        <nav class="nav-gauche">
-            <ul>
-                <li> 
-                    <a href="/">Accueil</a> 
-                </li>
-                <li> 
-                    <a href="/utilisateurs">Utilisateurs</a> 
-                </li>
-                <li> 
-                    <a href="/matériels">Matériels</a> 
-                </li>
-            </ul>
-        </nav>
-        <nav class="nav-droite">
-            <ul>
-                <li> 
-                    <a href="/connexion">Se connecter</a>
-                </li>
-                <li class="menu-container">
-                    <a href="/">Mon Compte</a>
-                    <div class="menu">
-                        <a href="/profil">Mon profil</a>
-                        <a href="">Se déconnecter</a>
-                    </div>
-                </li>
-            </ul>
-        </nav>
-    </div>
-</header> 
--->

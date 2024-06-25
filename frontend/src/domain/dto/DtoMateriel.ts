@@ -1,4 +1,4 @@
-import { Modele } from '../entity/modele';
+import { Modele } from '../entity/materiel';
 import { Salle } from '../entity/salle';
 import { Utilisateur } from '../entity/utilisateur';
 

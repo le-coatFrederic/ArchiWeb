@@ -1,0 +1,29 @@
+<h2> Ajouter un matériel</h2>
+<form (submit)="ajouterMateriel()"> 
+
+    <label>Modèle : </label><br>
+    <input type="text" id="modele" [(ngModel)]="materiel.modele" name="modele"><br>
+
+    <label>Statut : </label><br>
+    <select id="statut" [(ngModel)]="materiel.statut" name="statut">
+        <option *ngFor="let statut of statuts" [value]="statut">{{ statut }}</option>
+    </select><br>
+    
+    <label>Localisation: </label><br>
+    <select id="localisation" [(ngModel)]="materiel.localisation" name="localisation">
+        <option *ngFor="let salle of salles" [value]="salle.numero">Salle {{ salle.numero }} - {{ salle.ville }}</option>
+    </select><br>
+
+    <label>Type: </label><br>
+    <select id="type" [(ngModel)]="materiel.type" name="type">
+        <option *ngFor="let type of types" [value]="type.libelle">{{ type.libelle }}</option>
+    </select><br>
+
+    <label>Assigné à : </label><br>
+    <select id="assignedTo" [(ngModel)]="materiel.assignedTo" name="assignedTo">
+        <option value=""></option>
+        <option *ngFor="let user of users" [value]="user.nom">{{ user.prenom }} {{ user.nom }}</option>
+    </select><br>
+
+    <input type="submit" value="Ajouter">
+</form>

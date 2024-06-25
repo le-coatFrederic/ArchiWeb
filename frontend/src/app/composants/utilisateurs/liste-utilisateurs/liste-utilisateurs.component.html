@@ -1,0 +1,23 @@
+<h2>Liste des utilisateurs</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Rôle</th>
+            <th>Login</th>
+            <th colspan="2">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let utilisateur of utilisateurs">
+            <td>{{ utilisateur.nom }}</td>
+            <td>{{ utilisateur.prenom }}</td>
+            <td>{{ utilisateur.role }}</td>
+            <td>{{ utilisateur.login }}</td>
+            <td> Ajouter </td>
+            <td> Supprimer </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,7 @@
+<h2> Ajouter un type de matériel</h2>
+<form (submit)="ajouterTypeMateriel()"> 
+    <label>Libelle : </label><br>
+    <input type="text" id="libelle" [(ngModel)]="type.libelle" name="libelle"/><br>
+
+    <input type="submit" value="Ajouter" />
+</form>

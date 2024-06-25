@@ -1,0 +1,30 @@
+<h2> Ajouter un utilisateur</h2>
+<form (submit)="ajouterUtilisateur()"> 
+    <label>Organisme ou membre du personnel ?</label><br>
+
+    <input type="radio" id="organisme" name="typeUtilisateur" value="organisme" />
+    <label for="organisme">Organisme</label><br>
+
+    <input type="radio" id="personnel" name="typeUtilisateur" value="personnel" />
+    <label for="personnel">Membre du personnel</label><br>
+
+    <label for="nom">Nom : </label><br>
+    <input type="text" id="nom" [(ngModel)]="utilisateur.nom" name="nom" /><br>
+
+    <label for="prenom">Prenom : </label><br>
+    <input type="text" id="prenom" [(ngModel)]="utilisateur.prenom" name="prenom" /><br>
+
+    <label for="login">Login : </label><br>
+    <input type="text" id="login" [(ngModel)]="utilisateur.login" name="login" /><br>
+
+    <label for="password">Mot de passe : </label><br>
+    <input type="text" id="password" [(ngModel)]="utilisateur.password" name="password" /><br>
+
+    <label>Rôle ?</label>
+    <select id="roleUtilisateur" [(ngModel)]="utilisateur.role" name="roleUtilisateur" required>
+        <option *ngFor="let role of roles" [value]="role">{{ role }}</option>
+    </select><br>
+
+    <input type="submit" value="Ajouter" />
+
+</form>

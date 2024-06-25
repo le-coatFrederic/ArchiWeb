@@ -2,9 +2,8 @@ import { Router } from "express";
 import asyncHandler from "express-async-handler";
 import { Utilisateur, UtilisateurModel } from "../models/utilisateur.model";
 import jwt from "jsonwebtoken";
-import { HTTP_BAD_REQUEST } from "../constants/http_request";
+import { HTTP_BAD_PASSWORD, HTTP_BAD_REQUEST } from "../constants/http_request";
 import bcrypt from "bcryptjs";
-import { Role, RoleModel } from "../models/role.model";
 
 const router = Router();
 
@@ -35,7 +34,7 @@ router.post(
 router.post(
   "/register",
   asyncHandler(async (req, res) => {
-    const { prenom, nom, email, password } = req.body;
+    const { email, password, nom, prenom, organisme } = req.body;
     const user = await UtilisateurModel.findOne({ email });
     if (user) {
       res
@@ -45,20 +44,16 @@ router.post(
     }
 
     const encryptedPassword = await bcrypt.hash(password, 10);
-    const roleLambda = await RoleModel.findOne({
-      id: "66781435cd8f9541e9b47c04",
-    });
-
-    if (roleLambda == undefined) {
-      return;
-    }
+    const roleLambda = "utilisateur";
 
     const newUser: Utilisateur = {
       id: "",
-      prenom,
-      nom,
       email,
-      password: encryptedPassword,
+      //password: encryptedPassword,
+      password,
+      nom,
+      prenom,
+      organisme,
       role: roleLambda,
     };
 
@@ -67,7 +62,7 @@ router.post(
   })
 );
 
-const generateTokenResponse = (user: Utilisateur) => {
+const generateTokenResponse = (user: any) => {
   const token = jwt.sign(
     {
       email: user.email,
@@ -78,6 +73,11 @@ const generateTokenResponse = (user: Utilisateur) => {
       expiresIn: "30d",
     }
   );
+
+  user.token = token;
+  console.log(user);
+
+  return user;
 };
 
 export default router;

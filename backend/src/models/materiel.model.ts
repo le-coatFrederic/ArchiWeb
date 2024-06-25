@@ -1,20 +1,21 @@
 import { Schema, model } from "mongoose";
-import { Modele } from "./modele.model";
-import { Salle } from "./salle.model";
-import { Utilisateur } from "./utilisateur.model";
 
 export interface Materiel {
-  id: String;
-  modele: Modele;
-  salle: Salle;
-  utilisateur: Utilisateur;
+  _id: string;
+  type: string;
+  modele: string;
+  imageUrl: string;
+  emplacement: string;
+  idUtilisateur?: string;
 }
 
 export const MaterielSchema = new Schema<Materiel>(
   {
-    modele: { type: Object, required: true },
-    salle: { type: Object, required: true },
-    utilisateur: { type: Object, required: true },
+    type: { type: String, required: true },
+    modele: { type: String, required: true },
+    imageUrl: { type: String, required: true },
+    emplacement: { type: String, required: true },
+    idUtilisateur: { type: String, required: true },
   },
   {
     toJSON: {

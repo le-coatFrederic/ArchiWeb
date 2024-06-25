@@ -1,9 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Modele } from '../../../domain/entity/modele';
+import { Materiel } from '../../../domain/entity/materiel';
 import { NgClass, SlicePipe } from '@angular/common';
-import { OnClickModeleCardService } from '../../services/on-click-modele-card.service';
 import { Router } from '@angular/router';
-import { MODELES_BY_ID_URL } from '../../shared/constants/urls';
 
 @Component({
   selector: 'app-material-card',
@@ -13,18 +11,15 @@ import { MODELES_BY_ID_URL } from '../../shared/constants/urls';
   styleUrl: './material-card.component.css',
 })
 export class MaterialCardComponent implements OnInit {
-  @Input() modele!: Modele;
+  @Input() materiel!: Materiel;
 
-  constructor(
-    private cardClick: OnClickModeleCardService,
-    private router: Router
-  ) {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
-    console.log(this.modele._id);
+    console.log(this.materiel._id);
   }
 
   onDetailClick() {
-    this.router.navigateByUrl('/api/modeles/' + this.modele._id);
+    this.router.navigateByUrl('/api/materiels/search/' + this.materiel._id);
   }
 }

@@ -2,16 +2,16 @@
   <div class="head">
     <div>
       {{
-        modele.intitule.length > 17
-          ? (modele.intitule | slice : 0 : 32) + "..."
-          : modele.intitule
+        materiel.modele.length > 17
+          ? (materiel.modele | slice : 0 : 32) + "..."
+          : materiel.modele
       }}
     </div>
   </div>
 
   <div class="body">
-    @if (modele.imageUrl) {
-    <img [src]="modele.imageUrl" [alt]="modele.intitule" />
+    @if (materiel.imageUrl) {
+    <img [src]="materiel.imageUrl" [alt]="materiel.modele" />
     }
     <div class="content">
       <button (click)="onDetailClick()">Détails</button>

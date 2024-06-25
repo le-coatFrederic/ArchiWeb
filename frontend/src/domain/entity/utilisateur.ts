@@ -1,10 +1,12 @@
 export class Utilisateur {
-  constructor(
-    public id: string,
-    public role: string,
-    public email: string,
-    public password: string,
-    public nom: string,
-    public prenom?: string
-  ) {}
+  id!: string;
+  role!: string;
+  email!: string;
+  password!: string;
+  token!: string;
+  nom!: string;
+  prenom?: string;
+  organisme?: string;
+
+  constructor() {}
 }

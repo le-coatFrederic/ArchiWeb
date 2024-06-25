@@ -1,25 +1,25 @@
 import { Schema, model } from "mongoose";
-import { Organisme } from "./organisme.model";
-import { Role } from "./role.model";
 
 export interface Utilisateur {
   id: string;
+  role: string;
   email: string;
   password: string;
   nom: string;
   prenom?: string;
-  organisme?: Organisme;
-  role: Role;
+  organisme?: string;
+  token?: string;
 }
 
 export const UtilisateurSchema = new Schema<Utilisateur>(
   {
+    role: { type: String, required: true },
     email: { type: String, required: true },
     password: { type: String, required: true },
     nom: { type: String, required: true },
     prenom: { type: String, required: false },
-    organisme: { type: Object, required: false },
-    role: { type: Object, required: true },
+    organisme: { type: String, required: false },
+    token: { type: String, required: false },
   },
   {
     toJSON: {
